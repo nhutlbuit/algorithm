@@ -1,3 +1,5 @@
+package impl;
+
 public class triplicated {
     public static void triplicated() {
         String arr1 = "1234445555vcccc11";

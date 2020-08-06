@@ -1,12 +1,12 @@
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+package impl;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class countMatches {
     public static final String A = "a";
     public final String B = "b";
-     static long countMatches(String[] arr, String input) {
+    public static int countMatches(String[] arr, String input) {
         final long startTime = System.nanoTime();
         int count = 0;
         final Pattern pattern = Pattern.compile(input);
@@ -18,7 +18,7 @@ public class countMatches {
          return count;
     }
 
-     static long countMatchesUsedJoin(String[] arr, String input) {
+    public static int countMatchesUsedJoin(String[] arr, String input) {
         final long startTime = System.nanoTime();
         int count = 0;
         final Pattern pattern = Pattern.compile(input);
@@ -31,7 +31,7 @@ public class countMatches {
 
     static void printOutput(String method, long count, long startTime) {
         final long elapsedTime = System.nanoTime() - startTime;
-        final String output = String.format("output is used %s is: %s take %s nanosecond(s)", method, count, elapsedTime);
+        final String output = String.format("Output is used %s is: %s take %s nanosecond(s)", method, count, elapsedTime);
         System.out.println(output);
     }
 }
